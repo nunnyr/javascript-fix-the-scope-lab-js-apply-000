@@ -5,14 +5,18 @@ function myAnimal() {
   return animal
 }
 
-function yourAnimal() {
+function yourAnimal(string) {
   // The tests expect this function to return `animal` just like the previous function
   // However, you cannot simply modify the existing variable declared on line 1 in the global scope 
   // How can we make sure that this function
   // and the above function both pass?
   // P.S.: Hard-coding 'cat' below will not work
-  return animal
+  var animal = string;
+  console.log(animal);
+  return animal;
 }
+
+yourAnimal();
 
 function add2(n) {
   return n + two
